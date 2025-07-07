@@ -1,0 +1,13 @@
+/* 하위 선택자 */
+#first p {
+  color: red;
+}
+
+#second > p {
+  background-color: aqua;
+}
+
+/* 띄어쓰기 있고 없고 */
+p.inner {
+  color: blue;
+}

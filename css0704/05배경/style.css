@@ -1,0 +1,25 @@
+body {
+  background-image: url("../../images/apeach.jpeg");
+  background-repeat: no-repeat;
+  background-size: 500px 900px;
+  /* top center bottom     left center right */
+  background-position: center center;
+  height: 3000px;
+  background-attachment: fixed;
+
+  /* background: skyblue url("../../images/kakaofriends.gif")
+                 no-repeat center center fixed; */
+
+  background: linear-gradient(to right bottom, blue, pink);
+  background: radial-gradient(circle, skyblue, yellow);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+h1 {
+  background-color: #ff8081;
+}
+.bg {
+  background-color: rgba(100, 255, 50, 0.5);
+}
+p {
+  background-color: rgb(255, 100, 25);
+}

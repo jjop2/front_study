@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 500px;
+  height: 100px;
+  background-color: pink;
+}
+
+.nav {
+  width: 100px;
+  height: 300px;
+  background-color: moccasin;
+  float: left;
+}
+
+.content {
+  width: 400px;
+  height: 300px;
+  background-color: lightgreen;
+  float: left;
+}
+
+.footer {
+  width: 500px;
+  height: 100px;
+  background-color: skyblue;
+  clear: both;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}

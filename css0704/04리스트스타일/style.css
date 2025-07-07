@@ -1,0 +1,20 @@
+ol {
+  list-style-type: upper-roman;
+}
+
+/* ul > li {
+  /* list-style-image: url("../../images/daum.png"); <= 크기 조절 안 됨 */
+  /* list-style-type: none;
+  background-image: url("../../images/galio.jpg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: left center;
+  margin: 0;
+  padding: 18px 0 20px 15px;
+} */
+
+ul {
+  list-style-position: outside;
+  list-style: square inside;
+}
+

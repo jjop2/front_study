@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <h1>Home</h1>
+    </a>
+  </header>
+  <section>
+    <form action="" method="post">
+      <input type="text" placeholder="아이디" maxlength="20" minlength="5" required><br>
+      <input type="password" placeholder="비밀번호" maxlength="16" minlength="8" required><br>
+      <input type="text" placeholder="[선택] 이메일주소"><br><br>
+      <select name="telecom">
+        <option value="skt">SKT</option>
+        <option value="kt">KT</option>
+        <option value="lg">LG U+</option>
+      </select><br>
+      <input type="text" placeholder="이름" required><br>
+      <input type="text" placeholder="생년월일 8자리" maxlength="8" minlength="8" required><br>
+
+      <input id="gender-male" type="radio" name="gender" value="male" checked><label for="gender-male">남자</label>
+      <input id="gender-female" type="radio" name="gender" value="female"><label for="gender-female">여자</label>
+      
+      <input id="korean" type="radio" name="residnet" value="korean" checked><label for="korean">내국인</label>
+      <input id="foreigner" type="radio" name="residnet" value="foreigner"><label for="foreigner">외국인</label><br><br>
+      
+      <input type="text" placeholder="전화번호" maxlength="16" required><br>
+
+      <input type="submit" value="인증요청">
+
+    </form>
+  </section>
+</body>
+</html>

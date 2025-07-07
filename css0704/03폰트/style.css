@@ -1,0 +1,67 @@
+p {
+  /* 글꼴 크기 */
+  font-size: 32px; /* 기본은 16px */
+
+  /* 글꼴 두께 */
+  /*
+   100 : lighter
+   400 : normal (기본값)
+   700 : bold
+   900 : bolder
+  */
+  font-weight: normal;
+}
+
+/* 16px = 1em = 100% */
+/* px은 고정, em과 %은 부모 크기에 따라 상대적임 */
+body {
+  /* 줄간격 */
+  line-height: l.5em;
+
+  /* 글꼴 */
+  font-family: 'Courier New', Courier, monospace;
+  /* 폰트가 여러 개 나열된 이유 : 사용자환경에 따라 가능한 폰트를 순서대로 적용. 마지막으로 갈수로 어떤 환경에서나 가능한 폰트로 해야 함. */
+
+  /* 글꼴 스타일 */
+  font-style: italic;
+
+  /* 소문자를 대문자로 바꿈 */
+  font-variant: small-caps;
+
+  /* font: [font-style font-variant font-weight]
+           [font-size line-height]
+           [font-family]; */
+}
+
+/* p {
+  font: italic bold 25px '굴림', Gulim;
+  font: bold italic small-caps 12px/1.2 '돋움', '굴림', Gulim;
+} */
+
+h5 {
+  /* 글꼴 색 */
+  color: red;
+  color: #ff0000;
+  color: rgb(255, 0, 0);
+
+  text-decoration: underline;
+  
+  /* 대소문자 설정 */
+  text-transform: uppercase;
+
+  /* 그림자 */
+  /* 가로 세로 그림자퍼짐 그림자색 */
+  text-shadow: 1px 2px 1px gray;
+  text-shadow: 2px 4px 3px green;
+  /* 추가로 그림자 설정한다고 해도 누적 안 됨 */
+  /* 누적하고 싶으면 쉼표로 구분하여 이어서 작성 */
+
+  /* 자간 */
+  letter-spacing: 5px;
+  /* 단어 간격 */
+  word-spacing: 30px;
+  
+  text-align: center;
+
+}
+
