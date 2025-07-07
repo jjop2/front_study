@@ -15,4 +15,43 @@ ul > li {
 
 ul a {
   text-decoration: none;
+  color: black;
+}
+
+ul a:active {
+  background: red;
+  color: white;
+}
+
+.boxes {
+  margin-top: 100px;
+  width: 100%;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 30px;
+}
+
+.box1 {
+  background: pink;
+}
+
+.box2 {
+  background: moccasin;
+}
+
+.box3 {
+  background: skyblue;
+}
+
+.box4 {
+  background: lightgreen;
+}
+
+
+.box:hover {
+  transform: scale(1.5, 1.5);
 }
