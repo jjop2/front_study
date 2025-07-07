@@ -1,0 +1,54 @@
+body {
+  height: 3000px;
+}
+
+.fix {
+  width: 100px;
+
+  /* 브라우저 기준 */
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.sti {
+  background-color: pink;
+  text-align: center;
+
+  position: sticky;
+  top: 0;
+
+  opacity: 0.7;
+  z-index: 99;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.container > div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.box1 {
+  background-color: pink;
+  top: 10px;
+  left: 10px;
+}
+
+.box2 {
+  background-color: moccasin;
+  top: 20px;
+  left: 20px;
+}
+
+.box3 {
+  background-color: skyblue;
+  top: 30px;
+  left: 30px;
+}

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 브라우저 크기에 맞춤 */
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.profile {
+  width: 100%;
+  padding-top: 400px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 30%;
+  height: 30%;
+  margin: auto;
+}
+
+.image > img {
+  /* 위 image 클래스의 크기에 맞춤 */
+  /* 부모 태그를 기준으로 n% 비율 크기인 것임, 부모 영향! */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.icon {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.icon > div {
+  width: 25%;
+  float: left;
+}
+
+.icon img {
+  width: 30%;
+}

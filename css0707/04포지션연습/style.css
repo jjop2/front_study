@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  height: 3000px;
+}
+
+header {
+  background-color: skyblue;
+  padding: 10px;
+  /* 자식 요소들이 float 쓰는 바람에 자식이라고 인식하지 못함 */
+  /* 삐져 나간 것들을 다시 집어 넣기 위해 overflow */
+  overflow: auto;
+  border-bottom: 1px solid gray;
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 20px;
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+  float: right;
+}
+
+nav > ul > li {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+
+content {
+  clear: both;
+  padding: 20px;
+}
+
+content > h1, content > p {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+content > p {
+  line-height: 2.5em;
+}
+
+
+.btn-top {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-top i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+
+  font-size: 20px;
+  color: gray;
+}
+
+.btn-top:hover {
+  background-color: lightgrey;
+}
