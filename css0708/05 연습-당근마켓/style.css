@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1200px;
+}
+
+/* header */
+header {
+  background: white;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-around;
+
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+nav {
+  display: flex;
+}
+
+nav img {
+  width: 110px;
+  height: 30px;
+  flex: 0;
+  margin: 10px;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav > ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#used {
+  color: #ff8a3d;
+}
+
+.srh-chat {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+#search {
+  background: rgba(0, 0, 0, 0.05);
+  border: 0;
+  width: 230px;
+  height: 37px;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.chat {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 9px;
+  margin: 5px;
+
+  text-decoration: none;
+  color: black;
+}
+
+
+/* section */
+
+.near {
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  background: #FBF7F2;
+}
+
+.daangn-market {
+  text-align: left;
+  margin-left: auto
+}
+
+.daangn-market > h1 {
+  font-size: 40px;
+  line-height: 1.5em;
+}
+
+.daangn-market > h1 + p {
+  margin-top: 20px;
+}
+
+.near > img {
+  width: 800px;
+  height: 685px;
+  margin-left: auto;
+}
+
+.town {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.town > img {
+  width: 530px;
+  height: 685px;
+  margin-left:  50px;
+}
+
+.used-goods {
+  text-align: left;
+  margin-left: auto;
+}
+
+.used-goods > h1 {
+  font-size: 40px;
+  line-height: 1.5em;
+}
+
+.used-goods > p {
+  margin: 10px 0 30px 0;
+}
+
+.used-goods > a {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px;
+  margin-right: 15px;
+}
+
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footline {
+  border-bottom: 1px solid lightgray;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 310px;
+  height: 160px;
+  table-layout: fixed;
+  margin: 20px 0 0 10px;
+}
+
+table a {
+  text-decoration: none;
+  color: black;
+}
+
+.down > h5 {
+  margin: 20px 0 30px 0;
+}
+
+.down a {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 15px;
+  margin-right: 15px;
+}

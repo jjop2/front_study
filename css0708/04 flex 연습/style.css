@@ -33,3 +33,8 @@
   justify-content: center;
   align-items: center;
 }
+
+/* 
+  마지막 글씨는 굳이 박스 또 만들지 말고,
+  그냥 글씨 있는 그 태그의 크기를 알맞게 만들어서 색 채워주기
+ */
