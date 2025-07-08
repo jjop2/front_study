@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  border: 1px solid red;
 }
 
 body {
@@ -11,7 +13,7 @@ body {
 /* header */
 header {
   background: white;
-  padding: 0 5%;
+  padding: 0 3%;
   display: flex;
   justify-content: space-around;
 
@@ -27,7 +29,6 @@ nav {
 nav img {
   width: 110px;
   height: 30px;
-  flex: 0;
   margin: 10px;
 }
 
@@ -42,7 +43,7 @@ nav > ul a{
   color: black;
   font-size: 18px;
   font-weight: 700;
-  margin: 10px;
+  margin: 15px;
 }
 
 #used {
@@ -123,7 +124,7 @@ nav > ul a{
 
 .used-goods {
   text-align: left;
-  margin-left: auto;
+  margin-left: 200px;
 }
 
 .used-goods > h1 {
