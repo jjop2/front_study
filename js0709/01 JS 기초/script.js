@@ -60,3 +60,26 @@ let a = null;
 let x;
 // let x = undefined;
 console.log(x);
+
+
+
+// 모달창 띄우기
+// alert 메세지만 출력하고 확인 버튼 한 개
+// alert('메세지 띄우기');
+
+// prompt 메세지를 출력해주고 사용자에게 입력 받는 창이 있고
+// 확인과 취소 버튼이 있음
+// prompt('메세지', 초기값);
+// let result = prompt('메세지', 20);
+// console.log(result);
+
+
+// 간단 문제 : prompt로 나이를 입력 받아 그 값에 1을 더한 값이 콘솔창에 뜨게 하기
+// let age2 = Number( prompt('나이 입력') );
+// console.log(age2 + 1);
+
+// confirm 메세지를 출력해주고 확인, 취소 버튼이 있음
+// 확인을 누르면 true, 취소를 누르면 false가 리턴됨
+// confirm("메세지");
+let re = confirm("메세지");
+console.log(re);
