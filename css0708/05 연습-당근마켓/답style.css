@@ -10,6 +10,9 @@
 }
 
 body {
+  /* position:fixed 해버려서 헤더가 브라우저 크기 맞춰서 짤림... */
+  /* 과제 조건은 1200이긴 했는데 브라우저 너비여야 헤더가 정상적으로 보임 */
+  /* 아니면 헤더의 너비를 1200px로 하든지 */
   width: 1200px;
   /* 이거 하면 왼쪽으로 안 쏠리니까 보기에 더 좋을 듯 */
   margin: auto;
@@ -40,7 +43,7 @@ a {
   color: #ff8a3d;
 }
 
-.left-menu {
+.left-menu, .right-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +72,77 @@ input[type="search"] {
   background: white;
 }
 
+header {
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  background: white;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  padding: 15px;
+}
+
+.right-menu > div:nth-child(1) {
+  margin-right: 15px;
+}
+
+
+main {
+  margin-top: 60px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+#article-top h1, #article-bottom h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#article-top {
+  background: #FBF7F2;
+  padding-left: 30px;
+}
+
+#article-bottom {
+  background: white;
+}
+
 .btn-dark {
-  background: lightgray;
+  background: rgb(233, 233, 233);
+}
+
+#article-bottom p {
+  margin-bottom: 30px;
+}
+
+footer > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+footer li {
+  padding: 15px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer > div:nth-child(2) {
+  margin: 20px;
+}
+
+footer h5 {
+  padding: 15px 0;
 }

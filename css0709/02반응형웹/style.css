@@ -1,0 +1,19 @@
+/* 
+  @media : 미디어 쿼리를 쓸 거임
+  screen : 미디어 타입 - 화면
+  and : 조건들을 연결해주는 논리연산자
+  max-width : 조건.. 아래코드는 최대 너비가 500px일 때까지만 적용할 거다
+ */
+ 
+ div {
+   width: 200px;
+   height: 200px;
+   background: pink;
+ }
+ 
+@media screen and (max-width:500px) {
+  /* 해당 조건에 만족할 겨우 적용할 css 코드 */
+  div {
+    background: skyblue;
+  }
+}
