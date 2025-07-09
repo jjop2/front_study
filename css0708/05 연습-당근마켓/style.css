@@ -6,6 +6,7 @@
 
 body {
   width: 1200px;
+  margin: auto;
 }
 
 /* header */
@@ -25,7 +26,7 @@ nav {
   margin-right: auto;
 }
 
-nav img {
+nav > img {
   width: 110px;
   height: 30px;
   margin: 10px;
@@ -55,7 +56,7 @@ nav > ul > li:first-child > a {
   align-items: center;
 }
 
-#search {
+#srh {
   background: rgba(0, 0, 0, 0.05);
   border: 0;
   width: 240px;
@@ -68,6 +69,7 @@ nav > ul > li:first-child > a {
 
 .chat {
   border: 1px solid lightgray;
+  background: white;
   border-radius: 5px;
   font-weight: 700;
   padding: 9px;

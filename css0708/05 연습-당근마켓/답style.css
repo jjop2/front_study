@@ -1,0 +1,74 @@
+/* 전체 선택자는 모든 태그 하나하나를 적용시킴 */
+/* 전체 너비 조건이 1200px이라고 그걸 *에 넣어버리면 */
+/* 헤더도 입력창도 모두 1200px 되어버리니까, body에게 주기 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 여기서 텍스트 데코 none 해주면 하나하나 안 해도 된다~ */
+  text-decoration: none;
+}
+
+body {
+  width: 1200px;
+  /* 이거 하면 왼쪽으로 안 쏠리니까 보기에 더 좋을 듯 */
+  margin: auto;
+}
+
+.logo > img {
+  /* 높이만 지정해줘도 원본 비율에 맞게 줄어들음 */
+  height: 30px;
+  margin-right: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header-nav > ul > li {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+a {
+  color: black;
+}
+
+.carrot-color {
+  color: #ff8a3d;
+}
+
+.left-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 페이지에 서치 타입 인풋이 얘 하나뿐이므로 가능 */
+input[type="search"] {
+  width: 250px;
+  height: 40px;
+  font-size: 15px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-light {
+  border: 1px solid lightgray;
+  background: white;
+}
+
+.btn-dark {
+  background: lightgray;
+}

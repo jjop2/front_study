@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>당신 근처의 당근마켓</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../당근이미지/favicon.png" type="image/x-icon">
 </head>
 <body>
 
   <header>
     
+    <!-- 로고는 로고 따로, 네비 메뉴들만 nav로 묶는 게 더 나을 듯. -->
+    <!-- 대신 두 개 감싸는 div 하나 만들어야 됨  -->
     <nav>
       <img src="../당근이미지/logo.png" alt="">
       <ul>
@@ -23,7 +26,7 @@
 
     <div class="srh-chat">
       <form action="">
-        <input type="search" name="search" id="search"
+        <input type="search" name="search" id="srh"
         placeholder="물품이나 동네를 검색해보세요">
       </form>
       <a href="" class="chat">
