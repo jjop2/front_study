@@ -42,3 +42,42 @@ for(let i=1; i<=10; i++) {
 }
 console.log(sum);
 
+// 1+(1+2)+(1+2+3)+(1+2+3+4)+...+(1+2+3+...+10)의 결과를 계산
+// 내 답안
+// let sum2 = 0;
+// for(let i=1; i<=10; i++) {
+//   for(let j=1; j<=i; j++) {
+//     sum2 += j;
+//   }
+// }
+// console.log(sum2);
+
+// 쌤 답안
+let total = 0; // 전체 결과
+let innerTotal = 0; // 각 덩어리당 합계
+
+for(let i=1; i<=2; i++) {
+  innerTotal = 0; // 초기화 해줘야 함. j는 초기화가 되어도 innerTotal은 초기화가 안 됨
+  for(let j=1; j<=i; j++) {
+    innerTotal = innerTotal + j;
+  }
+  total = total + innerTotal;
+}
+
+// 답안2
+// for(let i=1; i<=10; i++) {
+//   innerTotal = innerTotal + i;
+//   total = total + innerTotal;
+// }
+
+console.log(total);
+
+
+// while문
+// while(조건식) {
+//   반복할코드
+// }
+
+// 반복 종료 - break;
+// 반복문 상단으로 돌아감 - continue;
+
