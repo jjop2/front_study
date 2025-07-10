@@ -39,3 +39,13 @@ function handler() {
 
 btn.addEventListener('click', handler);
 btn.removeEventListener('click', handler); // 삭제됨
+
+
+const btn2 = document.querySelector('.btn2');
+
+// 이벤트 객체 : 이벤트가 발생할 때 생기는 모든 정보를 가지고 있음
+btn2.addEventListener('click', function(e) {
+  console.log(e.type);
+  console.log(e.clientX);
+  console.log(e.target);
+});
