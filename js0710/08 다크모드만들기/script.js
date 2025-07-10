@@ -3,8 +3,14 @@ const btn = document.querySelector('#btn');
 const body = document.body;
 
 btn.addEventListener('click', function() {
-  body.style.background = 'black';
-  body.style.color = 'white';
+  if(btn.value === '다크모드') {
+    body.style.background = 'black';
+    body.style.color = 'white';
+    btn.value = '라이트모드';
+  } else {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    btn.value = '다크모드';
+  }
 });
-
 
