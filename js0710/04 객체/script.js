@@ -72,10 +72,17 @@ console.log(a);
 // console.log({ ...a }); 이렇게 대괄호를 다시 쳐주면 돌아감
 
 let { age, ...r } = a;
+// age키의 값 , 나머지는 r로
+// 왼쪽 <- 오른쪽 대입 방향이잖아. 그러니까 a를 조각조각 나눠서 let {}에 넣는 거지
 console.log(age);
+// age의 밸류인 20 출력
 console.log(r);
+// r에 들어간 나머지 녀석들인 {name:홍길동} 출력
 
 console.log({...r, age:30});
+// { } 떴다 재조합 ㄱㄱ
+// 뒤의 age 제외 나머지를 다시 r에 넣고, age는 값이 바뀜
+// {name:홍길동, age:30} 출력
 
 
 // in 연산자로 키가 있는지 없는지 검색 가능
