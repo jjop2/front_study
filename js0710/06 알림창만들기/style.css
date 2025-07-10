@@ -5,3 +5,8 @@
 
   display: none;
 }
+
+.alert {
+  background: moccasin;
+  height: 100px;
+}
