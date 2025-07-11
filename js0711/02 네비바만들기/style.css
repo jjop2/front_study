@@ -1,0 +1,30 @@
+/* 색이나 페이드효과는 내가 걍 넣은 거라 복습ㄴㄴ */
+
+.list-group {
+  display: none;
+  /* visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+
+  max-height: 300px;
+  position: relative;
+  top: -300px;
+
+  z-index: -1; */
+}
+
+.show {
+  display: block;
+  /* visibility: visible;
+  opacity: 1;
+
+  top: 0; */
+}
+
+.navbar-toggler {
+  background-color: yellowgreen;
+}
+
+.list-group-item {
+  background: rgba(188, 255, 64, 0.15);
+}
