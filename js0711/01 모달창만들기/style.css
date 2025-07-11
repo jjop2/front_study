@@ -1,0 +1,22 @@
+.black-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+
+  /* 본문 위로 겹쳐서 보이도록 하기 위함 */
+  position: fixed;
+
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.white-bg {
+  width: 80%;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+}
