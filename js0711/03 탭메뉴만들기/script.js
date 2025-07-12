@@ -1,5 +1,3 @@
-// 아까랑 똑같이 toggle...
-
 const btns = document.querySelectorAll('.tab-button');
 const contents = document.querySelectorAll('.tab-content');
 
