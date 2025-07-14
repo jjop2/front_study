@@ -41,3 +41,49 @@ document.querySelector('.btn').addEventListener('click', () => {
   }, 3000);
 
 });
+
+
+// 날짜 관련 함수들
+// 현재 날짜와 시간
+const date = new Date();
+console.log(date);
+
+// 년도 추출
+console.log(date.getFullYear());
+// 월 추출 - 0부터 11로 출력
+console.log(date.getMonth());
+// 일 추출
+console.log(date.getDate());
+// 요일 추출 - 0:일요일, 6:토요일
+console.log(date.getDay());
+
+// 시간 추출
+console.log(date.getHours());
+// 분 추출
+console.log(date.getMinutes());
+// 초 추출
+console.log(date.getSeconds());
+
+
+// 전자시계 만들기
+
+const clock = document.querySelector('.clock');
+
+function insertTime() {
+  const date = new Date(); // 매번 날짜를 가져와주는 것임
+  // 밑에 얘들만 계속 생성해줘봤자, 현재 날짜가 기존에 생성된 날짜 그대로 고정 중임
+  // 날짜 자체도 아예 새로 생성해줘야 함
+  const hours = String(date.getHours()).padStart(2, 0);
+  const minutes = String(date.getMinutes()).padStart(2, 0);
+  const seconds = String(date.getSeconds()).padStart(2, 0);
+
+  clock.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+};
+
+// 페이지 들어가자마자 뜨게 하기 위해, 우선 한번 실행
+insertTime();
+setInterval(insertTime, 1000);
+
+// padStart, padEnd
+// let a = `1`;
+// console.log( a.padEnd(2, 0) );
