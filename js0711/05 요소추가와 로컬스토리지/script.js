@@ -72,24 +72,55 @@ for(let i=0; i<cart.length; i++) {
     // 2. 꺼내온 데이터에 새로 담을 정보를 추가
     // 3. 추가된 데이터를 다시 로컬스토리지에 넣음
 
-
+    // 로컬스토리지에서 꺼내옴
     let temp = localStorage.getItem('cart');
+    
+    // 장바구니에 넣으려는 과일이 로컬스토리지에 있는지 여부를 알려주는 변수
+    let isHave = false;
+    // 장바구니에 넣으려는 과일이 로컬스토리지에 있으면
+    // 몇 번째 인덱스에 있는지 알려주는 변수
+    let index;
+
 
     // 로컬스토리지에 없는 키를 불러오라고 하면 null이 뜬다는 걸 활용
     if(temp != null) {
       // 로컬스토리지에 있으면 먼저 그 정보들을 꺼내와야 함
       // 문자열 형태이므로 원본이 배열로 되돌려줌
       temp = JSON.parse(temp);
+
+    
+      temp.forEach((data, i) => {
+        if(data.name === name) {
+          isHave = true;
+          index = i;
+        }
+      });
+
       
+
+      // 위 반복문에서 기존 로컬스토리지에 해당 과일이 있는지 없는지
+      // 검사를 끝냈으므로 여부에 따라 다르게 처리
+      if(isHave) {
+        temp[index].cnt++;
+      } else {
+        temp.push( {'name':name, 'cnt':1 });
+      }
+
+
       // 새로 장바구니에 담을 name을 추가 : push 사용하면 됨
-      temp.push(name);
+      // temp.push(name);
 
       // 추가된 정보를 로컬스토리지에 다시 넣음
       //          temp는 이미 배열 형태이기 때문에 대괄호 x
       localStorage.setItem('cart', JSON.stringify(temp));
       
     } else {
-      localStorage.setItem('cart', JSON.stringify([name]));
+      // 해당 과일이 없을 때가 아님!!
+      // 로컬스토리지 자체가 아예 비어 있을 때임
+      // 왜냐면 로.스의 키는 cart고 값으로 오브젝트를 넣고 있는 것이기 때문
+      localStorage.setItem('cart',
+        JSON.stringify([ { 'name' : name, 'cnt' : 1 } ]));
+        //                  key    value   key  value
     }
   })
 }
