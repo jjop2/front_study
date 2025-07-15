@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(to bottom, skyblue, rgb(202, 228, 235));
+  border-radius: 15px;
+}
+
+.selectBox {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#countrySelect {
+  border-radius: 8px;
+  border: 1px solid darkcyan;
+}
+
+.weather {
+  /* <chatGPT>
+    flex: 1;  =  남은 공간 모두 차지
+    [ flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0%; (기본 크기를 0으로 간주하고, 남는 공간을 비율로 분배) ]
+      => 이 3가지 속성을 줄여쓴 것
+    
+    [CSS-0708-자식에게 거는 flex 속성]에도 필기해뒀으니 확인!
+  */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.weatherName {
+  width: 60%;
+  align-self: center;
+  background: white;
+  border-radius: 10px;
+}
+
+.weatherIcon {
+  width: 120px;
+  height: 120px;
+  align-self: center;
+}

@@ -25,14 +25,39 @@ const countryCoordinates = {
   }
 };
 
-
 const countrySelect = document.querySelector('#countrySelect');
+const weatherName = document.querySelector('.weatherName');
+const weatherIcon = document.querySelector('.weatherIcon');
+const weatherTemp = document.querySelector('.weatherTemp');
+const weatherDesc = document.querySelector('.weatherDesc');
 
-const APIKEY = 'e638c68039a331b999f735bc8bd48b7b';
-const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`
+
+function showWeather(country) {
+  const lat = countryCoordinates[country]['latitude'];
+  const lon = countryCoordinates[country]['longitude'];
+  
+  const APIKEY = 'e638c68039a331b999f735bc8bd48b7b';
+  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric&lang=kr`;
+  
+  fetch(URL)
+    .then(response => response.json())
+    .then(data => {
+      // 확인용
+      // console.log(data);
+      
+      weatherName.innerHTML = data.name;
+      weatherTemp.innerHTML = data.main.temp;
+      weatherDesc.innerHTML = data.weather[0].description;
+      
+      const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      weatherIcon.setAttribute('src', iconURL);
+
+    });
+}
+
 
 countrySelect.addEventListener('change', (e) => {
-  a = e.target.value;
-  console.log(a);
+  showWeather(e.target.value); 
+});
 
-})
+showWeather('한국');
