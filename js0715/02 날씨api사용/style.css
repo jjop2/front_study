@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* border: 1px solid red; */
 }
 
 .container {
@@ -47,13 +49,37 @@
 
 .weatherName {
   width: 60%;
+  height: 30px;
   align-self: center;
   background: white;
   border-radius: 10px;
+  line-height: 30px;
 }
 
 .weatherIcon {
   width: 120px;
   height: 120px;
   align-self: center;
+}
+
+.weatherTemp, .weatherDesc {
+  padding-bottom: 20px;
+}
+
+.weatherBox {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.weatherFeel, .weatherRain {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+  width: 45%;
+  height: 40px;
+
+  background: white;
+  border-radius: 5px;
+  font-size: 14px;
 }

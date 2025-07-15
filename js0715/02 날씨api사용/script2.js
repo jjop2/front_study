@@ -30,6 +30,8 @@ const weatherName = document.querySelector('.weatherName');
 const weatherIcon = document.querySelector('.weatherIcon');
 const weatherTemp = document.querySelector('.weatherTemp');
 const weatherDesc = document.querySelector('.weatherDesc');
+const weatherFeel = document.querySelector('.weatherFeel');
+const weatherRain = document.querySelector('.weatherRain');
 
 
 function showWeather(country) {
@@ -46,11 +48,18 @@ function showWeather(country) {
       // console.log(data);
       
       weatherName.innerHTML = data.name;
-      weatherTemp.innerHTML = data.main.temp;
+      weatherTemp.innerHTML = `${data.main.temp}°`;
       weatherDesc.innerHTML = data.weather[0].description;
+      weatherFeel.innerHTML = `체감온도 ${data.main.feels_like}°`;
       
       const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
       weatherIcon.setAttribute('src', iconURL);
+
+      const isRain = data.rain;
+      if(isRain!=undefined)
+        weatherRain.innerHTML = `강수량 : ${isRain}`;
+      else
+        weatherRain.innerHTML = '강수량 : -';
 
     });
 }
