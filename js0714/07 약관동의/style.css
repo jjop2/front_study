@@ -6,10 +6,23 @@
   margin: auto;
 }
 
+body {
+  height: 3000px;
+}
+
 .container {
   text-align: center;
 }
 
 #chk:disabled + label {
   color: lightgray;
+}
+
+.status-bar {
+  width: 0;
+  height: 5px;
+  background: lightcoral;
+
+  position: fixed;
+  top: 0;
 }

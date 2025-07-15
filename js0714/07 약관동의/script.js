@@ -38,3 +38,25 @@ btn.addEventListener('click', () => {
     alert('동의하십시오.');
   }
 })
+
+// window : 이 창 자체, 브라우저 화면
+console.log(window.innerHeight);
+console.log(document.body.clientHeight);
+
+/*
+  화면 높이, 전체 총 높이 스크롤 얼마나 했는지(아래) <- 까지 구함
+  전체 총 높이 - 화면 높이 => 스크롤 최대 가동범위와 유사할 것임
+  스크롤 얼마나 했는지 / (전체 총 높이 - 화면 높이) - 이걸로 써먹자
+  ex. 10/100 ~> 20/100 ~> 30/100
+*/
+
+const innerHeight = window.innerHeight;
+const bodyHeight = document.body.clientHeight;
+
+window.addEventListener('scroll', () => {
+  // console.log(window.scrollY);
+
+  const status = window.scrollY / (bodyHeight - innerHeight) * 100;
+
+ document.querySelector('.status-bar').style.width = `${status}%`;
+})
