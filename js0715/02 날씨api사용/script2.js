@@ -35,8 +35,13 @@ const weatherRain = document.querySelector('.weatherRain');
 
 
 function showWeather(country) {
-  const lat = countryCoordinates[country]['latitude'];
-  const lon = countryCoordinates[country]['longitude'];
+  // 난 이렇게 했고
+  // const lat = countryCoordinates[country]['latitude'];
+  // const lon = countryCoordinates[country]['longitude'];
+
+  // 쌤은 이렇게 하심. 키값 꺼내는 방법이 2개 있다는 걸 있지 말자~
+  const lat = countryCoordinates[country].latitude;
+  const lon = countryCoordinates[country].longitude;
   
   const APIKEY = 'e638c68039a331b999f735bc8bd48b7b';
   const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric&lang=kr`;
@@ -57,11 +62,14 @@ function showWeather(country) {
 
       const isRain = data.rain;
       if(isRain!=undefined)
-        weatherRain.innerHTML = `강수량 : ${isRain}`;
+        weatherRain.innerHTML = `강수량 : ${data.rain['1h']}`;
       else
         weatherRain.innerHTML = '강수량 : -';
 
-    });
+    })
+    .catch((e) => {
+      alert('날씨 정보 가져오기 오류');
+    })
 }
 
 
