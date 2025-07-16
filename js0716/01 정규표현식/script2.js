@@ -47,9 +47,11 @@ function updataSubmit() {
   const telResult = validateInput(telInput, regexTel, telCheck);
 
   if(idResult && pwResult && emailCheck && telResult) {
+    // 회원가입버튼 활성화
     submitBtn.disabled = false;
     submitBtn.classList.add('enabled');
   } else {
+    // 비활성화
     submitBtn.disabled = true;
     submitBtn.classList.remove('enabled');
   }
